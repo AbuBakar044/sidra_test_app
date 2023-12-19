@@ -12,17 +12,31 @@ class _AsliHomePageState extends State<AsliHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SbsyAsliHomePage()));
-      }),
-     body: Center(
-      child: Image.asset('assets1/images/fb.png'),
-     ),
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.amber,
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: () {
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => SbsyAsliHomePage()));
+        }),
+        body: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/fb.png',
+                height: 90.0,
+                width: 90.0,
+              ),
+              Text(
+                'Facebook',
+                style: TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
-
-
